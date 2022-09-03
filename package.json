@@ -12,7 +12,7 @@
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
     "affected:e2e": "nx affected:e2e",
-    "affected:test": "nx affected:test --parallel --maxParallel=4 --all",
+    "affected:test": "nx affected:test --parallel --maxParallel=4 --all --testResultsProcessor='jest-junit'",
     "affected:lint": "nx affected:lint --parallel --maxParallel=4 --all",
     "affected:dep-graph": "nx affected:dep-graph",
     "affected": "nx affected"
@@ -29,6 +29,7 @@
     "@angular/router": "~14.2.0",
     "@nrwl/angular": "14.6.4",
     "husky": "^8.0.1",
+    "jest-junit": "^14.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
