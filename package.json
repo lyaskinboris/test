@@ -59,8 +59,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn pretty-quick --staged",
-      "pre-push": "yarn affected:lint && yarn affected:test"
+      "pre-push": "nx test"
     }
   }
 }
