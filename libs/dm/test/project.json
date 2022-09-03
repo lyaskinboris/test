@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/dm/test/src",
+  "prefix": "dm",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/dm/test"],
+      "options": {
+        "jestConfig": "libs/dm/test/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/dm/test/**/*.ts", "libs/dm/test/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

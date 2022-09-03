@@ -1,10 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { DmTestModule } from '@dm/dm/test';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [DmTestModule],
       declarations: [AppComponent, NxWelcomeComponent],
     }).compileComponents();
   });
@@ -21,7 +23,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('test');
   });
 
-  it('should render title', () => {
+  it('Wrong render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
